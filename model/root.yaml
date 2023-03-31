@@ -1,0 +1,3 @@
+imports:
+  - datasources/root.yaml
+  - docs/root.yaml

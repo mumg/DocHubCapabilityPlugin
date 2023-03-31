@@ -1,0 +1,22 @@
+capabilities:
+  capability.retail.shared.customer:
+    title: Управление клиентами
+    type: group
+  capability.retail.shared.customer.customer_care:
+    title: Обслуживание клиентов
+    type: capability
+  capability.retail.shared.customer.customer_retention:
+    title: Удержание клиентов
+    type: capability
+  capability.retail.shared.customer.complaint_management:
+    title: Управление обращениями
+    type: capability
+  capability.retail.shared.customer.gift_registry:
+    title: Реестр подарков
+    type: capability
+  capability.retail.shared.customer.loyalty_management:
+    title: Управление лояльностью
+    type: capability
+  capability.retail.shared.customer.preference_management:
+    title: Управление предпочтениями
+    type: capability

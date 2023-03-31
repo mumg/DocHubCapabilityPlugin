@@ -1,0 +1,46 @@
+capabilities:
+  capability.retail.enabling:
+    title: Обеспечивающие
+    type: group
+  capability.retail.enabling.corporate_governance:
+    title: Корпоративное управление
+    type: capability
+  capability.retail.enabling.strategy_management:
+    title: Стратегическое управление
+    type: capability
+  capability.retail.enabling.enterprise_project_management:
+    title: Управление корпоративными проектами
+    type: capability
+  capability.retail.enabling.enterprise_architecture:
+    title: Корпоративная архитектура
+    type: capability
+  capability.retail.enabling.legal_and_compliance:
+    title: Юридическое сопровождение
+    type: capability
+  capability.retail.enabling.real_estate_management:
+    title: Управление недвижимостью
+    type: capability
+  capability.retail.enabling.customer_servicedesk:
+    title: Служба поддержки клиентов
+    type: capability
+  capability.retail.enabling.enterprise_risk_management:
+    title: Управление рисками
+    type: capability
+  capability.retail.enabling.operations_and_support:
+    title: Операции и поддержка
+    type: capability
+  capability.retail.enabling.corporate_finance:
+    title: Бухгалтерия
+    type: capability
+  capability.retail.enabling.accounting_and_reporting:
+    title: Учет и отчетность
+    type: capability
+  capability.retail.enabling.it_management:
+    title: IT management
+    type: capability
+  capability.retail.enabling.corporate_communications:
+    title: Корпоративные связи
+    type: capability
+  capability.retail.enabling.human_resources:
+    title: Человеческие ресурсы
+    type: capability

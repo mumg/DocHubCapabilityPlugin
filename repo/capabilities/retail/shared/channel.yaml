@@ -1,0 +1,13 @@
+capabilities:
+  capability.retail.shared.channel:
+    title: Управление каналами
+    type: group
+  capability.retail.shared.channel.physical_store:
+    title: Точки продаж
+    type: capability
+  capability.retail.shared.channel.online_store:
+    title: Онлайн магазины
+    type: capability
+  capability.retail.shared.channel.mail_and_catalog:
+    title: Почта и каталоги
+    type: capability

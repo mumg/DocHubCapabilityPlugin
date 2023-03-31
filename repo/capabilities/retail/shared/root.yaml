@@ -1,0 +1,34 @@
+capabilities:
+  capability.retail.shared:
+    title: Общие
+    type: group
+  capability.retail.shared.change_management:
+    title: Управление изменениями
+    type: capability
+  capability.retail.shared.innovation_and_colaboration:
+    title: Инновации и сотрудничество
+    type: capability
+  capability.retail.shared.knowledge_management:
+    title: Управление знаниями
+    type: capability
+  capability.retail.shared.enterprise_data_management:
+    title: Управление корпоративными данными
+    type: capability
+  capability.retail.shared.business_intelligence:
+    title: Бизнес-аналитика
+    type: capability
+  capability.retail.shared.documents_and_records_management:
+    title: Документооборот
+    type: capability
+  capability.retail.shared.vendor_management:
+    title: Управление поставщиками
+    type: capability
+  capability.retail.shared.business_continuity:
+    title: Непрерывность бизнеса
+    type: capability
+imports:
+  - channel.yaml
+  - customer.yaml
+  - marketing.yaml
+  - merchandise.yaml
+  - operating.yaml

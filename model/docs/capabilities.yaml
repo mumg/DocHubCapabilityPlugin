@@ -1,0 +1,6 @@
+docs:
+  arch.business.capabilities:
+    location: Бизнес архитектура/Карта бизнес компетенций
+    type: capabilities
+    source: arch.business.capabilities
+

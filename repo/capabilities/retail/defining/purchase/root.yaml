@@ -1,0 +1,21 @@
+capabilities:
+  capability.retail.defining.purchase:
+    title: Покупки
+    type: group
+  capability.retail.defining.purchase.market_research_analysis:
+    title: Маркетинговое исследование
+    type: capability
+  capability.retail.defining.purchase.demand_forecasting:
+    title: Прогнозирование спроса
+    type: capability
+  capability.retail.defining.purchase.product_portfolio_management:
+    title: Управление портфелем продуктов
+    type: capability
+  capability.retail.defining.purchase.assortment_management:
+    title: Управление ассортиментом
+    type: capability
+  capability.retail.defining.purchase.foreign_trade_management:
+    title: Управление внешней торговлей
+    type: capability
+imports:
+  - procurement.yaml

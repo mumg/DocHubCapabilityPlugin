@@ -1,0 +1,13 @@
+capabilities:
+  capability.retail.shared.operations:
+    title: Управление операциями
+    type: group
+  capability.retail.shared.operations.contract_management:
+    title: Управление договорами
+    type: capability
+  capability.retail.shared.operations.loss_prevention:
+    title: Предотвращение потерь
+    type: capability
+  capability.retail.shared.operations.workflow_management:
+    title: Управление рабочим процессом
+    type: capability

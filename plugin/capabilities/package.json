@@ -1,0 +1,16 @@
+{
+  "name": "dochub-plugin-capabilities",
+  "version": "1.0.0",
+  "description": "Capabilities mapping document",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "M.Muratov",
+  "license": "MIT",
+  "dependencies": {
+    "get-size": "^3.0.0",
+    "masonry-layout": "^4.2.2",
+    "potpack": "^2.0.0"
+  }
+}

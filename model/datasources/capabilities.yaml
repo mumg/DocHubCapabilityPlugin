@@ -1,0 +1,42 @@
+datasets:
+  arch.business.capabilities:
+    source: >
+      (
+                $components := $.components;
+                $.capabilities.$spread().{
+                                    "id": $keys()[0],
+                                    "capability": $.*
+                                }.
+                                (
+                                    $cap_id := id;
+                                    capability.type = "group" ? (
+                                        $merge([capability, {
+                                            "id": id
+                                        }])
+                                    ) :
+                                    (
+                                        $merge([capability, {
+                                            "id": id,
+                                            "list": $append([], $components.$spread().{
+                                                  "id": $keys()[0],
+                                                  "component": $.*
+                                              }.
+                                              (   
+                                                  $id := id;
+                                                  $title := component.title;
+                                                  $exists(component.capabilities) ?
+                                                      component.capabilities.(
+                                                          $.id = $cap_id ? (
+                                                              {
+                                                                  "id": $id,
+                                                                  "title": $title,
+                                                                  "level" : $.level
+                                                              }
+                                                          )
+                                                      )
+
+                                               ))
+                            }])
+                        )
+                    )
+            )

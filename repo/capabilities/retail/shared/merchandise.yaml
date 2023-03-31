@@ -1,0 +1,13 @@
+capabilities:
+  capability.retail.shared.merchandise:
+    title: Управление товарами
+    type: group
+  capability.retail.shared.merchandise.price_management:
+    title: Управление ценами
+    type: capability
+  capability.retail.shared.merchandise.presentation_management:
+    title: Управление презентациями
+    type: capability
+  capability.retail.shared.merchandise.activity_management:
+    title: Управление акциями
+    type: capability

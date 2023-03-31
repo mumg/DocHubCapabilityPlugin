@@ -1,0 +1,16 @@
+capabilities:
+  capability.retail.defining.purchase.procurement_management:
+    title: Управление закупками
+    type: group
+  capability.retail.defining.purchase.procurement_management.requirements_gathering:
+    title: Сбор требований
+    type: capability
+  capability.retail.defining.purchase.procurement_management.sourcing_strategy:
+    title: Поисковая стратегия
+    type: capability
+  capability.retail.defining.purchase.procurement_management.contract_negotiation:
+    title: Установление контактов
+    type: capability
+  capability.retail.defining.purchase.procurement_management.purchase_order_management:
+    title: Управление заказами на покупку
+    type: capability

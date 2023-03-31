@@ -1,0 +1,18 @@
+capabilities:
+  capability.retail.defining.distribute:
+    title: Доставки
+    type: group
+  capability.retail.defining.distribute.strategy:
+    title: Стратегия распространения
+    type: capability
+  capability.retail.defining.distribute.packaging_management:
+    title: Управление упаковкой
+    type: capability
+  capability.retail.defining.distribute.fullfilment_planning:
+    title: Планирование fulfilment
+    type: capability
+  capability.retail.defining.distribute.allocation_and_replenishment:
+    title: Распределение и пополнение
+    type: capability
+imports:
+  - supply.yaml

@@ -1,0 +1,54 @@
+components:
+  systems.a:
+    entity: system
+    title: Система 1
+    capabilities:
+      - id: capability.retail.defining.sell.payments
+        level: moderate
+      - id: capability.retail.defining.sell.return_management
+        level: low
+      - id: capability.retail.defining.sell.processing_and_execution
+        level: moderate
+      - id: capability.retail.shared.merchandise.presentation_management
+        level: moderate
+      - id: capability.retail.shared.channel.online_store
+        level: moderate
+      - id: capability.retail.enabling.customer_servicedesk
+        level: moderate
+  systems.b:
+    entity: system
+    title: Система 2
+    capabilities:
+      - id: capability.retail.defining.sell.warranty_and_services
+        level: moderate
+      - id: capability.retail.defining.sell.order_fulfilment_and_delivery
+        level: low
+      - id: capability.retail.shared.enterprise_data_management
+        level: low
+      - id: capability.retail.enabling.accounting_and_reporting
+        level: moderate
+  systems.c:
+    entity: system
+    title: Система 3
+    capabilities:
+      - id: capability.retail.defining.sell.processing_and_execution
+        level: moderate
+      - id: capability.retail.shared.operations.workflow_management
+        level: moderate
+      - id: capability.retail.enabling.operations_and_support
+        level: low
+  systems.d:
+    entity: system
+    title: Система 4
+    capabilities:
+      - id: capability.retail.defining.sell.processing_and_execution
+        level: moderate
+      - id: capability.retail.shared.customer.customer_care
+        level: moderate
+      - id: capability.retail.shared.customer.complaint_management
+        level: moderate
+      - id: capability.retail.shared.customer.loyalty_management
+        level: low
+imports:
+  - model/root.yaml
+  - repo/root.yaml

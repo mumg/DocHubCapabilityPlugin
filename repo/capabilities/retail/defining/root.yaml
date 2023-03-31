@@ -1,0 +1,9 @@
+capabilities:
+  capability.retail.defining:
+    title: Определяюшие
+    type: group
+imports:
+  - planning/root.yaml
+  - purchase/root.yaml
+  - distribute/root.yaml
+  - sell/root.yaml

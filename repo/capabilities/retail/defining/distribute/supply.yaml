@@ -1,0 +1,16 @@
+capabilities:
+  capability.retail.defining.supply.chain_management:
+    title: Управление цепочками поставок
+    type: group
+  capability.retail.defining.supply.chain_management.inventory_management:
+    title: Управление запасами
+    type: capability
+  capability.retail.defining.supply.chain_management.warehouse_management:
+    title: Управление складом
+    type: capability
+  capability.retail.defining.supply.chain_management.transportation_execution:
+    title: Транспортировка
+    type: capability
+  capability.retail.defining.supply.chain_management.visibility_and_tracking:
+    title: Трекинг
+    type: capability

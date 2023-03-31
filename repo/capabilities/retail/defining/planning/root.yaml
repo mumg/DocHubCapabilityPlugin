@@ -1,0 +1,7 @@
+capabilities:
+  capability.retail.defining.strategic_planning:
+    title: Стратегическое планирование
+    type: group
+imports:
+  - strategy.yaml
+  - planning.yaml

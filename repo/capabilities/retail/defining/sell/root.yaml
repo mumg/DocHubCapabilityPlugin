@@ -1,0 +1,27 @@
+capabilities:
+  capability.retail.defining.sell:
+    title: Продажа
+    type: group
+  capability.retail.defining.sell.payments:
+    title: Платежи
+    type: capability
+  capability.retail.defining.sell.return_management:
+    title: Управление возвратами
+    type: capability
+  capability.retail.defining.sell.processing_and_execution:
+    title: Продажи и обработка
+    type: capability
+  capability.retail.defining.sell.markdown_management:
+    title: Управление уценкой
+    type: capability
+  capability.retail.defining.sell.warranty_and_services:
+    title: Гарантия и услуги
+    type: capability
+  capability.retail.defining.sell.pricing_and_promotions:
+    title: Цены и акции
+    type: capability
+  capability.retail.defining.sell.order_fulfilment_and_delivery:
+    title: Выполнение fulfilment и доставки
+    type: capability
+imports:
+  - store.yaml

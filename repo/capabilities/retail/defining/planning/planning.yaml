@@ -1,0 +1,19 @@
+capabilities:
+  capability.retail.defining.strategic_planning.planning:
+    title: Планирование
+    type: group
+  capability.retail.defining.strategic_planning.planning.merchandise_financial:
+    title: Товарное финансирование
+    type: capability
+  capability.retail.defining.strategic_planning.planning.assortment:
+    title: Планирование ассортимента
+    type: capability
+  capability.retail.defining.strategic_planning.planning.store_clusters:
+    title: Магазины
+    type: capability
+  capability.retail.defining.strategic_planning.planning.media_and_social:
+    title: Планирование цифровых и социальных сетей
+    type: capability
+  capability.retail.defining.strategic_planning.planning.sales:
+    title: Планирование продаж
+    type: capability

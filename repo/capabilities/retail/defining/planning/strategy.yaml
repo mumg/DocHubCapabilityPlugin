@@ -1,0 +1,19 @@
+capabilities:
+  capability.retail.defining.strategic_planning.strategy:
+    title: Стратегия
+    type: group
+  capability.retail.defining.strategic_planning.strategy.format:
+    title: Формат
+    type: capability
+  capability.retail.defining.strategic_planning.strategy.merchandise:
+    title: Товарная
+    type: capability
+  capability.retail.defining.strategic_planning.strategy.marketing:
+    title: Маркетинговая
+    type: capability
+  capability.retail.defining.strategic_planning.strategy.channels:
+    title: Каналы
+    type: capability
+  capability.retail.defining.strategic_planning.strategy.financial:
+    title: Финансовая
+    type: capability

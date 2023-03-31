@@ -1,0 +1,13 @@
+capabilities:
+  capability.retail.shared.marketing:
+    title: Управление продажами
+    type: group
+  capability.retail.shared.marketing.brand_management:
+    title: Управление торговыми марками
+    type: capability
+  capability.retail.shared.marketing.partner_management:
+    title: Управление партнерами
+    type: capability
+  capability.retail.shared.marketing.competitive_positioning:
+    title: Конкурентное позиционирование
+    type: capability

@@ -1,0 +1,10 @@
+capabilities:
+  capability.retail.defining.sell.store_management:
+    title: Управление магазинами
+    type: group
+  capability.retail.defining.sell.store_management.space_optimisation:
+    title: Оптимизация пространства
+    type: capability
+  capability.retail.defining.sell.store_management.signage_and_kiosks:
+    title: Вывески и киоски
+    type: capability
