@@ -1,0 +1,5 @@
+docs:
+  arch.business.products:
+    location: Бизнес архитектура/Карта продуктов
+    type: products
+    source: arch.business.products

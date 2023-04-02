@@ -1,0 +1,4 @@
+imports:
+  - product1.yaml
+  - product2.yaml
+  - product3.yaml

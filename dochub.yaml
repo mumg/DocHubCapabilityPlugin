@@ -15,6 +15,8 @@ components:
         level: moderate
       - id: capability.retail.enabling.customer_servicedesk
         level: moderate
+    products:
+      - product1
   systems.b:
     entity: system
     title: Система 2
@@ -27,6 +29,8 @@ components:
         level: low
       - id: capability.retail.enabling.accounting_and_reporting
         level: moderate
+    products:
+      - product1
   systems.c:
     entity: system
     title: Система 3
@@ -37,6 +41,8 @@ components:
         level: moderate
       - id: capability.retail.enabling.operations_and_support
         level: low
+    products:
+      - product2
   systems.d:
     entity: system
     title: Система 4
@@ -49,6 +55,8 @@ components:
         level: moderate
       - id: capability.retail.shared.customer.loyalty_management
         level: low
+    products:
+      - product3
 imports:
   - model/root.yaml
   - repo/root.yaml

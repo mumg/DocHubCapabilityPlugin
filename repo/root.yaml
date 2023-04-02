@@ -1,2 +1,3 @@
 imports:
   - capabilities/root.yaml
+  - products/root.yaml
