@@ -6,6 +6,7 @@
         v-bind:id="p.id"
         v-bind:key="p.id"
         v-bind:title="p.title"
+        v-bind:type="p.type"
         v-bind:capabilities="p.capabilities" />
     </div>
     <div id="product-capability-body" class="product-capability-body">
@@ -353,28 +354,30 @@
                 }
               }
             }
-            for ( const p of result.products ){
-              if ( p.list ){
-                for ( const s of p.list ){
-                  let rec = systems.get(s.id);
-                  if (!rec){
-                    rec = {
-                      title: s.title,
-                      capabilities: new Set(),
-                      products: new Set()
-                    };
-                    systems.set(s.id, rec);
+            if ( result.products) {
+              for (const p of result.products) {
+                if (p.list) {
+                  for (const s of p.list) {
+                    let rec = systems.get(s.id);
+                    if (!rec) {
+                      rec = {
+                        title: s.title,
+                        capabilities: new Set(),
+                        products: new Set()
+                      };
+                      systems.set(s.id, rec);
+                    }
+                    rec.products.add(p.id);
                   }
-                  rec.products.add(p.id);
                 }
               }
             }
 
-            function lookup(product){
+            function lookup(selector){
               let caps = new Map();
               for ( const s of systems.keys() ){
                 const _s = systems.get(s);
-                if ( _s.products.has(product)){
+                if ( selector(_s)){
                   for ( const c of _s.capabilities){
                     let r = caps.get(c);
                     if (!r){
@@ -400,14 +403,31 @@
               }
               return result;
             }
+
             function products(products){
               let result = [];
-              for ( const p of products ){
+              let out_scope = lookup((s)=>{
+                return s.products.size === 0
+              });
+              if ( out_scope.length > 0 ){
                 result.push({
-                  id: p.id,
-                  title: p.title,
-                  capabilities: lookup(p.id)
+                  id: "out.of.scope",
+                  title: "Вне продуктов",
+                  type: 'no-scope',
+                  capabilities: out_scope
                 });
+              }
+              if ( products){
+                for ( const p of products ){
+                  result.push({
+                    id: p.id,
+                    title: p.title,
+                    type: 'normal',
+                    capabilities: lookup((s)=>{
+                      return s.products.has(p.id)
+                    })
+                  });
+                }
               }
               return result;
             }

@@ -36,7 +36,7 @@
 
 .product-system {
   font-size: 8px;
-  color: white;
+  color: #470972;
 }
 
 .product-capability {
@@ -46,8 +46,9 @@
   max-width: 140px;
   min-width: 140px;
   min-height: 50px;
-  background-color: #085caf;
+  background-color: white;
   opacity: 1.0;
+  border-radius: 3px;
 }
 
 

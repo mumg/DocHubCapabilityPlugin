@@ -1,5 +1,5 @@
 <template>
-  <div v-bind:id="id" class="product">
+  <div v-bind:id="id" class="product" v-bind:class="color">
     <div class="product-title">
       <span>{{ title }}</span>
     </div>
@@ -33,17 +33,30 @@
       id: {
         type: String,
         required: true
+      },
+      type: {
+        type: String,
+        required: true
       }
     },
     data() {
       return {
-        container_id: 'container-' + this.id
+        container_id: 'container-' + this.id,
+        color: 'product-color-' + this.type
       };
     }
   };
 </script>
 
 <style scoped>
+
+.product-color-normal {
+  background-color: #E3D9EA;
+}
+
+.product-color-no-scope {
+  background-color: #F8CECC;
+}
 
 
 .product {
@@ -52,7 +65,6 @@
   position: absolute;
   border-radius: 5px;
   opacity: 0.9;
-  background-color: #0b74de;
 }
 
 .product-container{

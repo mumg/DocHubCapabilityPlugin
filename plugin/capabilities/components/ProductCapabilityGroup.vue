@@ -77,6 +77,7 @@
   font-size: large;
   font-weight: bold;
   max-width: 150px;
+  color: #470972;
 }
 
 .product-capability-group-title-v {
@@ -86,11 +87,12 @@
   font-size: small;
   font-weight: bold;
   max-width: 150px;
+  color: #470972;
 }
 .product-color-0 {
 }
 .product-color-1 {
-  background-color: #DAE8FC;
+  background-color: #E7DFED;
 }
 
 

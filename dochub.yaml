@@ -55,8 +55,6 @@ components:
         level: moderate
       - id: capability.retail.shared.customer.loyalty_management
         level: low
-    products:
-      - product3
 imports:
   - model/root.yaml
   - repo/root.yaml
