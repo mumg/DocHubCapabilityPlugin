@@ -62,13 +62,14 @@
 .product {
   border: 2px solid #000000;
   margin: 5px;
-  position: absolute;
+  position: relative;
   border-radius: 5px;
   opacity: 0.9;
+  width: 155px;
 }
 
 .product-container{
-  width: 100%;
+  width: 160px;
   display: flex;
   flex-direction: column;
 }

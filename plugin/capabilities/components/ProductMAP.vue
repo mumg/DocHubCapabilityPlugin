@@ -1,6 +1,8 @@
 <template>
   <div id="product-capability-map" class="product-capability-map">
     <div class="product-capability-header">
+    </div>
+    <div id="product-list" class="product-list">
       <product
         v-for="p in products"
         v-bind:id="p.id"
@@ -63,7 +65,8 @@
         refresher: null,
         capabilityMap: [],
         products: [],
-        tree: []
+        tree: [],
+        margin: 0
       };
     },
 
@@ -74,11 +77,21 @@
     },
     mounted() {
       this.onRefresh();
+      window.addEventListener('resize', this.onResize);
+    },
+    beforeDestroy() {
+      window.removeEventListener('resize', this.onResize);
     },
     methods: {
+      onResize(){
+        const l = document.getElementById('product-list');
+        const map = document.getElementById('product-capability-body');
+        const map_sz = get_size(map);
+        l.style.width = (map_sz.width-this.margin - 15).toString() +'px';
+      },
       doLayout(){
         const p = document.getElementById('product-capability-map').getBoundingClientRect();
-
+        const l = document.getElementById('product-list');
         const _cache = new Map();
         function getElement(id){
           if ( _cache.has(id)){
@@ -114,12 +127,7 @@
           }
         });
         left += 10;
-        for ( const p of this.products ){
-          const product = getElement(p.id);
-          product.style.left = left.toString() + 'px';
-          product.style.width = '155px';
-          left += 160;
-        }
+        l.style.marginLeft = left.toString() + 'px';
         caps.forEach((c)=>{
           let height = 50;
           const el = getElement(c);
@@ -146,7 +154,7 @@
         const map_sz = get_size(map);
         for ( const p of this.products ){
           const product = getElement(p.id);
-          product.style.height = (map_sz.height + 50).toString() + 'px';
+          product.style.height = (map_sz.height + 90).toString() + 'px';
         }
         this.$nextTick(()=>{
           caps.forEach((c)=>{
@@ -165,6 +173,9 @@
               }
             });
           });
+          l.style.height = (map_sz.height + 90).toString() + 'px';
+          this.margin = left;;
+          l.style.width = (map_sz.width-this.margin - 15).toString() +'px';
         });
 
       },
@@ -407,12 +418,12 @@
             function products(products){
               let result = [];
               let out_scope = lookup((s)=>{
-                return s.products.size === 0
+                return s.products.size === 0;
               });
               if ( out_scope.length > 0 ){
                 result.push({
-                  id: "out.of.scope",
-                  title: "Вне продуктов",
+                  id: 'out.of.scope',
+                  title: 'Вне продуктов',
                   type: 'no-scope',
                   capabilities: out_scope
                 });
@@ -424,7 +435,7 @@
                     title: p.title,
                     type: 'normal',
                     capabilities: lookup((s)=>{
-                      return s.products.has(p.id)
+                      return s.products.has(p.id);
                     })
                   });
                 }
@@ -449,7 +460,7 @@
 
 <style scoped>
 .product-capability-header{
-  min-height: 50px;
+  min-height: 90px;
   width: 100%;
 }
 .product-capability-body{
@@ -462,6 +473,14 @@
   display: flex;
   width: 100%;
   flex-direction: column;
+}
+
+.product-list {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 </style>
